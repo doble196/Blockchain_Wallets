@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../Downloads/01-Ethereum_through_Web3py 2"
+		},
+		{
+			"path": "../../../../Downloads/02-Transactions_with_Web3py"
+		},
+		{
+			"path": "../../../../Downloads/03-From_Mnemonic_to_Ethereum_Account"
+		},
+		{
+			"path": "../../../../Downloads/04-Signing_Ethereum_Transactions"
+		},
+		{
+			"path": "../../../../Downloads/05-Connect_to_a_Ganache_Blockchain"
+		},
+		{
+			"path": "../../../../Downloads/06-Sign_and_Send_a_Transaction"
+		}
+	],
+	"settings": {}
+}
