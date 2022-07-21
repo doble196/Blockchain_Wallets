@@ -146,12 +146,12 @@ st.sidebar.write(account.address)
 # @TODO
 # Call `get_balance` function and pass it your account address
 # Write the returned ether balance to the sidebar
-eth_balance = w3.fromWei('0xed39956E0764C9D0b1620d32FCaF4EA0260D6c3b')
-
+eth_balance = get_balance.fromWei(w3, account.address)
+st.sidebar.write(eth_balance)
 ##########################################
 
 # Create a select box to chose a FinTech Hire candidate
-person = st.sidebar.selectbox('Select a Person', people)
+person = st.sidebar.selectbox("Select a Person", people)
 
 # Create a input field to record the number of hours the candidate worked
 hours = st.sidebar.number_input("Number of Hours")
@@ -237,7 +237,7 @@ st.sidebar.markdown("## Total Wage in Ether")
 # Calculate total `wage` for the candidate by multiplying the candidate’s hourly
 # rate from the candidate database (`candidate_database[person][3]`) by the
 # value of the `hours` variable
-wage = (candidate_database["Ash"][3])(hours)
+wage = (candidate_database[person][3])*(hours)
 
 # @TODO
 # Write the `wage` calculation to the Streamlit sidebar
@@ -268,9 +268,8 @@ if st.sidebar.button("Send Transaction"):
     # Call the `send_transaction` function and pass it 3 parameters:
     # Your `account`, the `candidate_address`, and the `wage` as parameters
     # Save the returned transaction hash as a variable named `transaction_hash`
-    account = st.text_input("candidate_address")
-        return candidate_address
-
+    transaction_hash = st.text_input(w3,account, candidate_address, wage)
+    
     # Markdown for the transaction hash
     st.sidebar.markdown("#### Validated Transaction Hash")
 
@@ -278,7 +277,7 @@ if st.sidebar.button("Send Transaction"):
     st.sidebar.write(transaction_hash)
 
     # Celebrate your successful payment
-    st.balloons()
+    st.balloons(w3)
 
 # The function that starts the Streamlit application
 # Writes FinTech Finder candidates to the Streamlit page
