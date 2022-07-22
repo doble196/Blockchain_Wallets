@@ -88,7 +88,7 @@ from crypto_wallet import generate_account, get_balance, send_transaction
 # A single Ether is currently valued at $1,500
 candidate_database = {
     "Lane": ["Lane", "0xaC8eB8B2ed5C4a0fC41a84Ee4950F417f67029F0", "4.3", .20, "Images/lane.jpeg"],
-    "Ash": ["Ash", "0x2422858F9C4480c2724A309D58Ffd7Ac8bF65396", "5.0", .33, "Images/ash.jpeg"],
+    "Rensley": ["Rensley", "0x2422858F9C4480c2724A309D58Ffd7Ac8bF65396", "5.0", .33, "Images/ash.jpeg"],
     "Jo": ["Jo", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.7", .19, "Images/jo.jpeg"],
     "Kendall": ["Kendall", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.1", .16, "Images/kendall.jpeg"]
 }
@@ -130,7 +130,7 @@ st.sidebar.markdown("## Client Account Address and Ethernet Balance in Ether")
 
 # @TODO:
 #  Call the `generate_account` function and save it as the variable `account`
-account = w3.generate_account()
+account = generate_account()
 
 ##########################################
 
@@ -146,7 +146,7 @@ st.sidebar.write(account.address)
 # @TODO
 # Call `get_balance` function and pass it your account address
 # Write the returned ether balance to the sidebar
-eth_balance = get_balance.fromWei(w3, account.address)
+eth_balance = get_balance(w3, account.address)
 st.sidebar.write(eth_balance)
 ##########################################
 
@@ -268,7 +268,7 @@ if st.sidebar.button("Send Transaction"):
     # Call the `send_transaction` function and pass it 3 parameters:
     # Your `account`, the `candidate_address`, and the `wage` as parameters
     # Save the returned transaction hash as a variable named `transaction_hash`
-    transaction_hash = st.text_input(w3,account, candidate_address, wage)
+    transaction_hash = send_transaction(w3,account, candidate_address, wage)
     
     # Markdown for the transaction hash
     st.sidebar.markdown("#### Validated Transaction Hash")
@@ -277,11 +277,11 @@ if st.sidebar.button("Send Transaction"):
     st.sidebar.write(transaction_hash)
 
     # Celebrate your successful payment
-    st.balloons(w3)
+    st.balloons()
 
 # The function that starts the Streamlit application
 # Writes FinTech Finder candidates to the Streamlit page
-get_people()
+get_people(w3)
 
 ################################################################################
 # Step 3: Inspect the Transaction
