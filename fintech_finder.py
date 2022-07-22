@@ -94,7 +94,7 @@ candidate_database = {
 }
 
 # A list of the FinTech Finder candidates first names
-people = ["Lane", "Ash", "Jo", "Kendall"]
+people = ["Lane", "Rensley", "Jo", "Kendall"]
 
 
 def get_people(w3):
