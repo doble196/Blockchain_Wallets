@@ -87,14 +87,19 @@ from crypto_wallet import generate_account, get_balance, send_transaction
 # Database of Fintech Finder candidates including their name, digital address, rating and hourly cost per Ether.
 # A single Ether is currently valued at $1,500
 candidate_database = {
-    "Lane": ["Lane", "0xaC8eB8B2ed5C4a0fC41a84Ee4950F417f67029F0", "4.3", .20, "Images/lane.jpeg"],
-    "Ash": ["Ash", "0x2422858F9C4480c2724A309D58Ffd7Ac8bF65396", "5.0", .33, "Images/ash.jpeg"],
-    "Jo": ["Jo", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.7", .19, "Images/jo.jpeg"],
-    "Kendall": ["Kendall", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.1", .16, "Images/kendall.jpeg"]
+    "Rensley": ["Rensley", "0xC10876E9A0bC4834d1277CEaeE34018cFf8f01cC", "5.0", .33, "Images/rensley.jpeg"],
+    "Lane": ["Lane", "0xed39956E0764C9D0b1620d32FCaF4EA0260D6c3b", "4.3", .20, "Images/lane.jpeg"],
+    "Jo": ["Jo", "0x0e8184f3cB1Cda5a2361eba4252289D870c90E21", "4.7", .19, "Images/jo.jpeg"],
+    "Krystal": ["Krystal", "0x2D5c74032c0cf875e8567f8D527Ec0b2FcD4F86e", "4.1", .16, "Images/krystal.jpeg"],
+    "Talia": ["Talia", "0xd0ce083dbcF74292fbc12635f7EEe471e7AE5327", "4.2", .28, "Images/talia.jpeg"],
+    "Victoria": ["Victoria", "0x34D545884E9E2Dd6616c734555e82B8a30fF4EEd", "4.4", .23, "Images/victoria.jpeg"],
+    "Leah": ["Leah", "0x91b35395FAbDC730e1B931E5F5143a1668B95e31", "4.3", .29, "Images/leah.jpeg"],
+    "Sebastian": ["Sebastian", "0xBfEF49f20FD5f283BA4F0Ad3946d40c5E18fdaB8", "4.5", .22, "Images/sebastian.jpeg"],
+    "Justin": ["Justin", "0x4E91315E0b9bd5ED34A6b56cB97c3714996916C7", "3.8", .15, "Images/justin.jpeg"]
 }
 
 # A list of the FinTech Finder candidates first names
-people = ["Lane", "Ash", "Jo", "Kendall"]
+people = ["Rensley", "Lane", "Jo", "Krystal", "Talia", "Victoria", "Leah", "Sebastian", "Justin"]
 
 
 def get_people(w3):
