@@ -1,4 +1,4 @@
-# Blockchain_Eallets  
+# Blockchain_Wallets  
 
 `Instructions`
 The steps for this contract are broken out into the following sections:  
@@ -13,7 +13,8 @@ The steps for this contract are broken out into the following sections:
 
    * Add Relevant User Inputs to the Streamlit Interface.  
 
-### Add your mnemonic seed phrase (provided by Ganache) to the starter code’s SAMPLE.env file. Rename the file .env.  
+#### Add your mnemonic seed phrase (provided by Ganache) to the starter code’s SAMPLE.env file. Rename the file .env.  
+
 
 ## Step 1: Import Ethereum Transaction Functions into the Fintech Finder Application:  
 
@@ -51,7 +52,7 @@ You will then write code that uses the calculated wage value to send a transacti
 
    * Now that the application can calculate a candidate’s wage, write the code that will allow a customer (you, in this case) to send an Ethereum blockchain transaction that pays the hired candidate. To accomplish this, locate the code that reads if st.sidebar.button("Send Transaction"). You’ll need to add logic to this if statement that sends the appropriate information to the send_transaction function (which you imported from the crypto_wallet script file). Inside the if statement, add the following functionality:  
 
-        Call the send_transaction function and pass it three parameters:  
+        Call the send_transaction function and pass it three parameters: 
 
            * Your Ethereum account information. (Remember that this account instance was created when the generate_account function was called.) From the account instance, the application will be able to access the account.address information that is needed to populate the from data attribute in the raw transaction.  
 
@@ -59,7 +60,8 @@ You will then write code that uses the calculated wage value to send a transacti
 
            * The wage value. This will be passed to the toWei function to determine the wei value of the payment in the raw transaction.  
 
-### Save the transaction hash that the send_transaction function returns as a variable named transaction_hash, and have it display on the application’s web interface.  
+#### Save the transaction hash that the send_transaction function returns as a variable named transaction_hash, and have it display on the application’s web interface.  
+
 
 ## Step 3: Inspect the Transaction  
 Now it's time to put it all together and test the Fintech Finder application with your newly integrated Ethereum wallet. You will send a test transaction by using the application’s web interface, and then look up the resulting transaction in Ganache. To do so, complete the following steps:  
@@ -76,7 +78,7 @@ Now it's time to put it all together and test the Fintech Finder application wit
 
 
 ## Step 4: Add Relevant User Inputs to the Streamlit Interface
-`Code additional input areas for the user interface of your Streamlit application`. Create these input areas to capture the sender, receiver, and amount for each transaction that you’ll store in the Block record. To do so, complete the following steps:  
+Code additional input areas for the user interface of your Streamlit application. Create these input areas to capture the sender, receiver, and amount for each transaction that you’ll store in the Block record. To do so, complete the following steps:  
 
    * Delete the input_data variable from the Streamlit interface.  
 
@@ -85,7 +87,6 @@ Now it's time to put it all together and test the Fintech Finder application wit
    * Add an input area where you can get a value for receiver from the user.  
 
    * Add an input area where you can get a value for amount from the user.  
-
 
 
 
@@ -132,4 +133,4 @@ Now it's time to put it all together and test the Fintech Finder application wit
 
 ## Contributor
 
-`Rensley Ramos` - `ranly196@gmail.com`, `https://www.linkedin.com/in/rensley-2-nfty/`
+`Rensley Ramos` - ranly196@gmail.com, https://www.linkedin.com/in/rensley-2-nfty/  
